@@ -1,19 +1,19 @@
 {
   "employees": [
     {
-      "firstName": "negrasos",
-      "lastName": "nitalesss",
+      "firstName": "John",
+      "lastName": "Doe",
       "documentType": "PASSPORT",
       "documentNumber": 12313123112,
-      "employeeType": "MINORIA",
+      "employeeType": "PERMANENT",
       "birthDate": "2024-08-30",
       "hiringDate": "2024-09-04",
       "id": "0",
       "active": true
     },
     {
-      "firstName": "Johns",
-      "lastName": "trolo",
+      "firstName": "Jane",
+      "lastName": "Smith",
       "documentType": "DNI",
       "documentNumber": 1234567898,
       "employeeType": "CONTRACTOR",
@@ -23,19 +23,19 @@
       "active": true
     },
     {
-      "id": "e45d",
-      "firstName": "sass",
-      "lastName": "trolo",
+      "firstName": "Alice",
+      "lastName": "Johnson",
       "documentType": "DNI",
       "documentNumber": 12345678,
-      "employeeType": "MINORIA",
-      "hiringDate": "2024-10-02",
+      "employeeType": "INTERN",
       "birthDate": "2024-10-03",
+      "hiringDate": "2024-10-02",
+      "id": "e45d",
       "active": false
     },
     {
-      "firstName": "prueba updates",
-      "lastName": "nav",
+      "firstName": "Bob",
+      "lastName": "Brown",
       "documentType": "DNI",
       "documentNumber": 12345,
       "employeeType": "PERMANENT",
@@ -45,11 +45,11 @@
       "active": false
     },
     {
-      "firstName": "pruebas",
-      "lastName": "redireccss",
+      "firstName": "Charlie",
+      "lastName": "Davis",
       "documentType": "DNI",
       "documentNumber": 129980,
-      "employeeType": "PERMANENT",
+      "employeeType": "INTERN",
       "birthDate": "2024-10-05",
       "hiringDate": "2024-10-01",
       "id": "598a",
