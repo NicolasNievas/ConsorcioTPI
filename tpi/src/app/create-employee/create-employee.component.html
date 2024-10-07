@@ -1,0 +1,123 @@
+<div class="container big-cart">
+    <h3>Registrar Empleado</h3>
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <!-- Primera columna -->
+        <div class="col-md-6">
+          <div class="form-group mt-3">
+            <label for="firstName">Nombre:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              placeholder="Nombre del Empleado"
+              formControlName="firstName"
+              required
+            />
+            <div *ngIf="employeeForm.get('firstName')?.invalid && (employeeForm.get('firstName')?.dirty || employeeForm.get('firstName')?.touched)" class="error">
+              El nombre es requerido.
+            </div>
+          </div>
+  
+          <div class="form-group mt-3">
+            <label for="documentType">Tipo de Documento:</label>
+            <select
+              class="form-control"
+              id="documentType"
+              formControlName="documentType"
+              required
+            >
+              <option *ngFor="let type of documentTypes" [value]="type">{{ type }}</option>
+            </select>
+            <div *ngIf="employeeForm.get('documentType')?.invalid && (employeeForm.get('documentType')?.dirty || employeeForm.get('documentType')?.touched)" class="error">
+              El tipo de documento es requerido.
+            </div>
+          </div>
+  
+          <div class="form-group mt-3">
+            <label for="employeeType">Tipo de Empleado:</label>
+            <select
+              class="form-control"
+              id="employeeType"
+              formControlName="employeeType"
+              required
+            >
+              <option *ngFor="let type of employeeTypes" [value]="type">{{ type }}</option>
+            </select>
+            <div *ngIf="employeeForm.get('employeeType')?.invalid && (employeeForm.get('employeeType')?.dirty || employeeForm.get('employeeType')?.touched)" class="error">
+              El tipo de empleado es requerido.
+            </div>
+          </div>
+  
+          <div class="form-group mt-3">
+            <label for="birthDate">Fecha de Nacimiento:</label>
+            <input
+              type="date"
+              class="form-control"
+              id="birthDate"
+              formControlName="birthDate"
+              required
+            />
+            <div *ngIf="employeeForm.get('birthDate')?.invalid && (employeeForm.get('birthDate')?.dirty || employeeForm.get('birthDate')?.touched)" class="error">
+              La fecha de nacimiento es requerida.
+            </div>
+          </div>
+        </div>
+  
+        <!-- Segunda columna -->
+        <div class="col-md-6">
+          <div class="form-group mt-3">
+            <label for="lastName">Apellido:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              placeholder="Apellido del Empleado"
+              formControlName="lastName"
+              required
+            />
+            <div *ngIf="employeeForm.get('lastName')?.invalid && (employeeForm.get('lastName')?.dirty || employeeForm.get('lastName')?.touched)" class="error">
+              El apellido es requerido.
+            </div>
+          </div>
+  
+          <div class="form-group mt-3">
+            <label for="documentNumber">Número de Documento:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="documentNumber"
+              placeholder="Número de Documento"
+              formControlName="documentNumber"
+              required
+            />
+            <div *ngIf="employeeForm.get('documentNumber')?.invalid && (employeeForm.get('documentNumber')?.dirty || employeeForm.get('documentNumber')?.touched)" class="error">
+              El número de documento es requerido.
+            </div>
+          </div>
+  
+          <div class="form-group mt-3">
+            <label for="hiringDate">Fecha de Contratación:</label>
+            <input
+              type="date"
+              class="form-control"
+              id="hiringDate"
+              formControlName="hiringDate"
+              required
+            />
+            <div *ngIf="employeeForm.get('hiringDate')?.invalid && (employeeForm.get('hiringDate')?.dirty || employeeForm.get('hiringDate')?.touched)" class="error">
+              La fecha de contratación es requerida.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between mt-3">
+        <button type="button" class="btn btn-secondary mt-3" (click)="onCancel()">
+          Cancelar
+        </button>
+        <button type="submit" class="btn btn-success mt-3" [disabled]="employeeForm.invalid">
+          Registrar
+        </button>
+      </div>
+    </form>
+  </div>
